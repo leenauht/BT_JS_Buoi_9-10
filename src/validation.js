@@ -28,7 +28,10 @@ class Validation {
    * test xài với regex(/^[A-Za-z]+$/)
    */
   checkCharacterString(value, spanId, mess) {
-    const letter = "^[A-Za-z]+$";
+    const letter =
+      "^[a-zA-Z_ÀÁÂÃÈÉÊẾÌÍÒÓÔÕÙÚĂĐĨŨƠàáâãèéêìíòóôõùúăđĩũơƯĂẠẢẤẦẨẪẬẮẰẲẴẶ" +
+      "ẸẺẼỀỀỂưăạảấầẩẫậắằẳẵặẹẻẽềềểếỄỆỈỊỌỎỐỒỔỖỘỚỜỞỠỢỤỦỨỪễệỉịọỏốồổỗộớờởỡợ" +
+      "ụủứừỬỮỰỲỴÝỶỸửữựỳỵỷỹ\\s]+$";
 
     if (value.match(letter)) {
       getElmID(spanId).innerHTML = "";
